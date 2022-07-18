@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+  <record id="view_tsc_career_tree" model="ir.ui.view">
+    <field name="name">tsc.career.tree</field>
+    <field name="model">tsc.career</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="career_detail"/>
+        <field name="work_at"/>
+        <field name="career_category"/>
+        <field name="create_date"/>
+        <field name="day_left"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_tsc_career" model="ir.ui.view">
+    <field name="name">tsc.career.form</field>
+    <field name="model">tsc.career</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="career_detail"/>
+              <field name="career_link" widget="url"/>
+              <field name="work_at"/>
+              <field name="create_date"/>
+            </group>
+            <group>
+              <field name="career_category"/>
+              <field name="career_tag"/>
+              <field name="open_date"/>
+              <field name="expired_date"/>
+              <field name="day_left"/>
+            </group>
+          </group>
+        </sheet>
+        <!--Chatter-->
+          <div class="oe_chatter">
+            <field name="message_follower_ids" groups="base.group_user"/>
+            <field name="activity_ids"/>
+            <field name="message_ids"/>
+          </div>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_tsc_career" model="ir.actions.act_window">
+    <field name="name">Career</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tsc.career</field>
+    <field name="view_mode">tree,kanban,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          Create first career !
+      </p>
+    </field>
+  </record>
+
+  <!-- Job Part-->
+  <record id="action_career_job" model="ir.actions.act_window">
+    <field name="name">Job</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tsc.career</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('career_category','=','Job')]</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          create your first job!
+      </p>
+    </field>
+  </record>
+
+  <!-- Internship Part-->
+  <record id="action_career_internship" model="ir.actions.act_window">
+    <field name="name">Internship</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">tsc.career</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('career_category','=','Internship')]</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+          create your first internship!
+      </p>
+    </field>
+  </record>
+
+<!--  <menuitem id="menu_tsc_career"-->
+<!--            name="Careers"-->
+<!--            parent="tsc_career_root"-->
+<!--            action="action_tsc_career"-->
+<!--            sequence="1"/>-->
+
+    <menuitem id="menu_tsc_job"
+            name="Jobs"
+            parent="tsc_career_root"
+            action="action_career_job"
+            sequence="2"/>
+
+    <menuitem id="menu_tsc_intern"
+            name="Internship"
+            parent="tsc_career_root"
+            action="action_career_internship"
+            sequence="3"/>
+</odoo>

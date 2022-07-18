@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+tsc_organization,tsc.organization,model_tsc_organization,base.group_user,1,1,1,1
+tsc_team,tsc.team,model_tsc_team,base.group_user,1,1,1,1
+tsc_career,tsc.career,model_tsc_career,base.group_user,1,1,1,1

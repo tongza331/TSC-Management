@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="tsc_root"
+            name="TSC"
+            sequence="10"/>
+
+    <menuitem id="tsc_team_root"
+            name="TSC Team"
+            parent="tsc_root"
+            action="action_tsc_team"
+            sequence="10"/>
+
+    <menuitem id="tsc_organization_root"
+            name="TSC Organization"
+            parent="tsc_root"
+            action="action_tsc_organization"
+            sequence="10"/>
+
+    <menuitem id="tsc_career_root"
+            name="TSC Careers"
+            parent="tsc_root"
+            sequence="10"/>
+
+</odoo>
