@@ -26,10 +26,9 @@ class WebsiteTSC(http.Controller):
                 type='http', auth='public', website=True)
     def job_list(self, page=0):
         domain = [('career_category', '=', 'Job')]
-        # domain = []
         total_jobs = http.request.env['tsc.career'].search(domain)
         total_count = len(total_jobs)
-        per_page = 10
+        per_page = 5
 
         # total : Total count of records
         # Page : Current page

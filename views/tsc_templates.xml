@@ -246,41 +246,76 @@
 <!--job-->
 <template id="job_list">
     <t t-call="website.layout">
-    <t t-set="title">Jobs</t>
+        <t t-set="title">Jobs</t>
         <div class="oe_structure">
-            <div class="container">
-                <div class="container">
-                    <t t-foreach="jobs" t-as="job">
-                        <t t-if="job.day_left != '0'">
-                            <p><t t-esc="job.name"/></p>
-                            <p><t t-esc="job.career_detail"/></p>
-                            <p><t t-esc="job.work_at.name"/></p>
-                            <p>Start date: <t t-esc="job.open_date"/></p>
-                            <p>End date: <t t-esc="job.expired_date"/></p>
-                            <p><a t-attf-href = "#{job.career_link}" target="_blank">Apply now</a></p>
-                            <p>----------------</p><br/>
-                        </t>
-                    </t>
-
-                    <t t-foreach="jobs" t-as="job">
-                        <t t-if="job.day_left == '0'">
-                            <p><t t-esc="job.name"/></p>
-                            <p><t t-esc="job.career_detail"/></p>
-                            <p><t t-esc="job.work_at.name"/></p>
-                            <p>Start date: <t t-esc="job.open_date"/></p>
-                            <p>End date: <t t-esc="job.expired_date"/></p>
-                            <p>Expired date</p>
-                            <p>----------------</p><br/>
-                        </t>
-                    </t>
+            <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip712102">
+                <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/web/image/1565-7b54d6a7/_MG_0011.jpg&quot;); background-position: 50% 81.8497%;" data-original-id="1563" data-original-src="/web/image/1563-5277a178/_MG_0011.jpg" data-mimetype="image/jpeg" data-resize-width="1920"/>
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="s_allow_columns container" data-original-title="" title="" aria-describedby="tooltip167337">
+                  <h1 style="text-align: center;">
+                    <font style="font-size: 62px; font-weight: bold;">JOIN OUR TEAM</font>
+                  </h1>
+                  <p style="text-align: center;" data-original-title="" title="" aria-describedby="tooltip825630">
+                    <a class="mb-2 btn btn-fill-primary rounded-circle" href="#bottom" data-original-title="" title="">Contact us</a>
+                  </p>
                 </div>
-            <!-- Job page-->
-            <div style="margin-top: 100px !important;" class="products_pager form-inline justify-content-center mt-3">
-                <t t-call="website.pager"/>
-            </div>
-            </div>
+                <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable" href="#" title="Scroll down to next section" style="">
+                  <i class="fa fa-angle-down fa-3x"/>
+                </a>
+              </section>
+              <section class="s_title o_colored_level pt24 pb0" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                  <h3 style="text-align: center;">
+                    <font>Our position available</font>
+                    <br/>
+                  </h3>
+                  <div class="s_hr text-left pt4 pb8" data-snippet="s_hr" data-name="Separator">
+                    <hr class="mx-auto w-50" style="border-top-width: 1px; border-top-style: solid;"/>
+                  </div>
+                </div>
+              </section>
+              <section class="s_title o_colored_level pb24 pt8" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                  <h5 style="text-align: center; margin: 0px;">
+                    <font>Find your dream job</font>
+                  </h5>
+                </div>
+              </section>
+            <section class="s_media_list pb32 o_cc o_cc2 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip475429">
+                <div class="container">
+                  <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                      <t t-foreach="jobs" t-as="job">
+                        <div class="col-lg-12 s_media_list_item " data-name="Media item" style="padding: 32px 30px 0px 30px">
+                          <div class="row s_col_no_resize s_col_no_bgcolor no-gutters o_cc o_cc1 o_colored_level align-items-center" style="">
+                            <div class="s_media_list_body col-lg-12" data-original-title="" title="" aria-describedby="tooltip398901" style="max-width: 100%; flex: 0 0 100%;">
+                              <h3><t t-esc="job.name"/> | <t t-esc="job.work_at.name"/></h3>
+                                <h3>
+                                    <span style="font-size: 18px;">
+                                        <t t-esc="job.career_detail"/><br/>
+                                        <t t-if="job.expired_date">
+                                            Start date : <t t-esc="job.open_date"/> | End date : <t t-esc="job.expired_date"/>
+                                        </t>
+                                        <t t-if="not job.expired_date">
+                                            Start date : <t t-esc="job.open_date"/> | End date : -
+                                        </t>
+                                    </span>
+                                </h3>
+                                <p style="margin-bottom: 0;">
+                                    <a t-attf-href = "#{job.career_link}" target="_blank" class="btn btn-fill-primary rounded-circle" data-original-title="" title="" aria-describedby="popover465776" style="margin-top:10px;">Read more</a>
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </t>
+                  </div>
+                </div>
+                <!-- Job page-->
+                    <div class="products_pager form-inline justify-content-center mt32">
+                        <t t-call="website.pager"/>
+                    </div>
+              </section>
         </div>
-    </t>
+        </t>
 </template>
 
 <!--  Internship-->
@@ -288,17 +323,128 @@
     <t t-call="website.layout">
     <t t-set="title">Jobs</t>
         <div class="oe_structure">
-            <div class="container">
-            <t t-foreach="intern" t-as="intern">
-                <p><t t-esc="intern.name"/></p>
-            </t>
+            <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip712102">
+                <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/web/image/1569-f5bee64c/ff11388802df02662688057eb0e738ec.png&quot;); background-position: 50% 81.8497%;" data-original-id="1563" data-original-src="/web/image/1563-5277a178/_MG_0011.jpg" data-mimetype="image/jpeg" data-resize-width="1920"/>
+                <div class="o_we_bg_filter bg-black-25"/>
+                <div class="s_allow_columns container" data-original-title="" title="" aria-describedby="tooltip167337">
+                  <h1 style="text-align: center;">
+                    <font style="font-size: 62px; font-weight: bold;">STUDENT INTERNSHIP</font>
+                  </h1>
+                  <p style="text-align: center;" data-original-title="" title="" aria-describedby="tooltip825630">
+                    <a class="mb-2 btn btn-fill-primary rounded-circle" href="#bottom" data-original-title="" title="">Contact us</a>
+                  </p>
+                </div>
+                <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable" href="#" title="Scroll down to next section" style="">
+                  <i class="fa fa-angle-down fa-3x"/>
+                </a>
+            </section>
 
-            <!-- Intern page-->
-            <div style="margin-top: 100px !important;" class="products_pager form-inline justify-content-center mt-3">
-                <t t-call="website.pager"/>
+            <section class="s_title o_colored_level pt24 pb0" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                    <h3 style="text-align: center;">
+                        <font>Student Internship Programs</font>
+                    </h3>
+                    <div class="s_hr text-left pt4 pb8" data-snippet="s_hr" data-name="Separator">
+                        <hr class="mx-auto w-50" style="border-top-width: 1px; border-top-style: solid;"/>
+                    </div>
+                </div>
+            </section>
+
+            <section class="s_title o_colored_level pb0 pt8" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                    <h5 style="text-align: center;">
+                        <font>Gain work-related experience</font><br/>
+                    </h5>
+                </div>
+            </section>
+            <section class="s_process_steps o_colored_level pt0 pb0" data-snippet="s_process_steps" data-name="Steps" style="background-image: none;">
+                <div class="o_container_small">
+                     <div class="row no-gutters">
+                         <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level" style="">
+                             <div class="s_process_step_icon">
+                                 <span>
+                                     <i class="fa mx-auto fa-wrench fa-2x rounded-circle text-o-color-4 bg-600" style="" data-original-title="" title="" aria-describedby="tooltip619945"/>
+                                 </span>
+                             </div>
+                             <div class="s_process_step_content text-center">
+                                 <h2>
+                                     <span style="font-size: 18px;">PRACTICE</span><br/>
+                                 </h2>
+                             </div>
+                         </div>
+                                <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                                  <div class="s_process_step_icon">
+                                    <span>
+                                      <i class="fa mx-auto rounded-circle fa-book fa-2x bg-800" data-original-title="" title="" aria-describedby="tooltip176642" style=""/>
+                                    </span>
+                                  </div>
+                                  <div class="s_process_step_content text-center">
+                                    <h2>
+                                      <span style="font-size: 18px;">LEARNING</span>
+                                      <br/>
+                                    </h2>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                                  <div class="s_process_step_icon">
+                                    <span>
+                                      <i class="fa mx-auto rounded-circle fa-handshake-o fa-2x bg-900" data-original-title="" title="" aria-describedby="tooltip187437"/>
+                                    </span>
+                                  </div>
+                                  <div class="s_process_step_content text-center">
+                                    <h2>
+                                      <span style="font-size: 24px;">
+                                        <span style="font-size: 18px;">EXPERIENCE</span>
+                                      </span>
+                                      <br/>
+                                    </h2>
+                                  </div>
+                                </div>
+                        <div class="col-lg-3 s_process_step pt24 pb24 o_colored_level">
+                          <div class="s_process_step_icon">
+                            <span>
+                              <i class="fa mx-auto rounded-circle fa-trophy fa-2x bg-black" data-original-title="" title="" aria-describedby="tooltip197522"/>
+                            </span>
+                          </div>
+                          <div class="s_process_step_content text-center">
+                            <h2>
+                              <span style="font-size: 24px;">
+                                <span style="font-size: 18px;">SUCCESS</span>
+                              </span>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+            <section class="s_media_list pb32 o_cc o_cc2 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip475429">
+                <div class="container">
+                  <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                      <t t-foreach="intern" t-as="intern">
+                        <div class="col-lg-12 s_media_list_item " data-name="Media item" style="padding: 32px 30px 0px 30px">
+                          <div class="row s_col_no_resize s_col_no_bgcolor no-gutters o_cc o_cc1 o_colored_level align-items-center" style="">
+                            <div class="s_media_list_body col-lg-12" data-original-title="" title="" aria-describedby="tooltip398901" style="max-width: 100%; flex: 0 0 100%;">
+                              <h3><t t-esc="intern.name"/> | <t t-esc="intern.work_at.name"/></h3>
+                                <h3>
+                                    <span style="font-size: 18px;">
+                                        <t t-esc="intern.career_detail"/>
+                                    </span>
+                                </h3>
+                                <p style="margin-bottom: 0;">
+                                    <a t-attf-href = "#{intern.career_link}" target="_blank" class="btn btn-fill-primary rounded-circle" data-original-title="" title="" aria-describedby="popover465776" style="margin-top:10px;">Read more</a>
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </t>
+                  </div>
+                </div>
+                <!-- Job page-->
+                    <div class="products_pager form-inline justify-content-center mt32">
+                        <t t-call="website.pager"/>
+                    </div>
+              </section>
             </div>
-            </div>
-        </div>
     </t>
 </template>
 

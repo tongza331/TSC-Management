@@ -5,7 +5,7 @@ class TSCCareer(models.Model):
     _name = 'tsc.career'
     _description = 'Career in TSC'
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _order = "day_left desc, create_date desc"
+    _order = "create_date desc, day_left asc"
 
     CareerTag = [
         ('Announcement','Announcement'),
