@@ -29,6 +29,7 @@
             </group>
             <group>
               <field name="organization_category"/>
+              <field name="org_link" widget="url"/>
               <field name="image_org" widget="image" class="oe_avatar"/>
             </group>
           </group>

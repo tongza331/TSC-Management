@@ -66,3 +66,41 @@ class WebsiteTSC(http.Controller):
             'intern': intern,
             'pager': pager,
         })
+
+
+    @http.route(['/about-us/tsc-member'],
+                type='http', auth='public', website=True)
+    def tsc_org_member(self, **kw):
+        science = http.request.env['tsc.organization'].search([('organization_category', '=', 'Scientific')])
+        academic = http.request.env['tsc.organization'].search([('organization_category', '=', 'Academic')])
+        mod = http.request.env['tsc.organization'].search([('organization_category', '=', 'Ministry of Defence')])
+        org_category = http.request.env['tsc.organization'].search([])
+
+        dict_sci = {}
+        dict_academic = {}
+        dict_mod = {}
+        i = 0
+        j = 0
+        k = 0
+        for temp in science:
+            i = i+1
+            dict_sci[temp] = i
+
+        for temp in academic:
+            j = j+1
+            dict_academic[temp] = j
+
+        for temp in mod:
+            k = k+1
+            dict_mod[temp] = k
+
+
+        return http.request.render("tsc.tsc_org_member", {
+            'science': science,
+            'academic': academic,
+            'mod': mod,
+            'org_category': org_category,
+            'dict_sci': dict_sci,
+            'dict_academic': dict_academic,
+            'dict_mod': dict_mod,
+        })

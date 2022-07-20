@@ -18,6 +18,7 @@ class TSCOrganization(models.Model):
     image_org = fields.Image(string='Picture of organization',
                              max_width=200, max_height=200, required=True, tracking=True)
     organization_category = fields.Selection(OrganizationCategory, string='Organization Category', required=True)
+    org_link = fields.Char(string='Organization Url', tracking=True)
 
     _sql_constraints = [
         ('name_uniq', 'unique (name)', "Organization name already exists !"),

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-<data>
 
 <!-- Name list overall -->
 <template id="team_list" name="tsc_member">
@@ -448,5 +447,115 @@
     </t>
 </template>
 
-</data>
+<!-- TSC Organization Member-->
+<template id="tsc_org_member">
+    <t t-call="website.layout">
+    <t t-set="title">TSC Member</t>
+         <div class="oe_structure">
+             <section class="s_title o_colored_level pt24 pb8" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
+                <div class="container s_allow_columns">
+                  <h3 style="text-align: center;">TSC members</h3>
+                  <div class="s_hr text-left pt4 pb8" data-snippet="s_hr" data-name="Separator">
+                    <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                  </div>
+                </div>
+              </section>
+              <!--Scientific-->
+              <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                  <h3 style="text-align: center;">
+                    <span style="font-size: 24px;">Scientific</span>
+                    <font/>
+                  </h3>
+                </div>
+              </section>
+             <section class="s_references o_colored_level pb24 pt16" data-snippet="s_references" data-name="References" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip935441">
+                <div class="container">
+                  <div class="row">
+                      <t t-foreach="dict_sci" t-as="dict_sci">
+                          <t t-if="dict_sci_value%2 == 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
+                                  <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                          <t t-if="dict_sci_value%2 != 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
+                                  <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                      </t>
+                  </div>
+                </div>
+             </section>
+
+             <!--Academic-->
+              <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                  <h3 style="text-align: center;">
+                    <span style="font-size: 24px;">Academic</span>
+                    <font/>
+                  </h3>
+                </div>
+              </section>
+             <section class="s_references o_colored_level pb24 pt16" data-snippet="s_references" data-name="References" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip935441">
+                <div class="container">
+                  <div class="row">
+                      <t t-foreach="dict_academic" t-as="dict_academic">
+                          <t t-if="dict_academic_value%2 == 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
+                                  <a t-attf-href = "#{dict_academic.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                          <t t-if="dict_academic_value%2 != 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
+                                  <a t-attf-href = "#{dict_academic.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                      </t>
+                  </div>
+                </div>
+             </section>
+             <!--MOD-->
+              <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
+                <div class="s_allow_columns container">
+                  <h3 style="text-align: center;">
+                    <span style="font-size: 24px;">Ministry of Defence</span>
+                    <font/>
+                  </h3>
+                </div>
+              </section>
+             <section class="s_references o_colored_level pb24 pt16" data-snippet="s_references" data-name="References" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip935441">
+                <div class="container">
+                  <div class="row">
+                      <t t-foreach="dict_mod" t-as="dict_mod">
+                          <t t-if="dict_mod_value%2 == 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
+                                  <a t-attf-href = "#{dict_mod.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                          <t t-if="dict_mod_value%2 != 0">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
+                                  <a t-attf-href = "#{dict_mod.org_link}" target="_blank">
+                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                  </a>
+                              </div>
+                          </t>
+                      </t>
+                  </div>
+                </div>
+             </section>
+         </div>
+    </t>
+</template>
+
 </odoo>
