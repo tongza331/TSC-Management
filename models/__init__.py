@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import TSCTeam_Model
-from . import TSCOrganization_Model
-from . import TSCCareer_Model
+from . import TSC_Team_Model
+from . import TSC_Organization_Model
+from . import TSC_Career_Model

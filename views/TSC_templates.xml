@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
-<!-- Name list overall -->
+<!--Name list overall -->
 <template id="team_list" name="tsc_member">
     <t t-call="website.layout">
     <t t-set="title">Our Team</t>
         <div class="oe_structure">
             <div class="container">
             <section class="s_title pt40 o_colored_level pb16" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
-
             <!-- Header Our Team -->
             <div class="s_allow_columns container">
                 <h3 style="text-align: center;">
@@ -22,7 +20,6 @@
                 </div>
             </div>
             </section>
-
             <!-- Tabs -->
             <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabs" style="background-image: none; padding-top : 0px !important;">
             <div class="container">
@@ -43,7 +40,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <!-- Tabs content -->
                     <div class="s_tabs_content tab-content">
                         <!-- Leader -->
@@ -73,7 +69,6 @@
                             </section>
                         </div>
                         </div>
-
                         <!-- Advisor -->
                         <div class="tab-pane fade" id="nav_tabs_content_advisor" role="tabpanel" aria-labelledby="nav_tabs_link_advisor">
                         <div class="oe_structure oe_empty">
@@ -101,7 +96,6 @@
                             </section>
                         </div>
                         </div>
-
                         <!-- Researcher -->
                         <div class="tab-pane fade" id="nav_tabs_content_researcher" role="tabpanel" aria-labelledby="nav_tabs_link_researcher">
                         <div class="oe_structure oe_empty">
@@ -129,7 +123,6 @@
                             </section>
                         </div>
                         </div>
-
                         <!-- Engineer -->
                         <div class="tab-pane fade" id="nav_tabs_content_engineer" role="tabpanel" aria-labelledby="nav_tabs_link_engineer">
                         <div class="oe_structure oe_empty">
@@ -166,7 +159,7 @@
     </t>
 </template>
 
-<!-- Team in detail-->
+<!--Team in detail-->
 <template id="team_detail" name="tsc_detail">
     <t t-call="website.layout">
     <t t-set="title">Team detail</t>
@@ -184,7 +177,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="s_tabs o_colored_level">
                 <div class="col-md-4" style="margin-top: 10px;">
                 <!-- Breadcrumbs -->
@@ -197,12 +189,11 @@
                     </li>
                 </ol>
                 </div>
-
                  <section class="s_media_list pb32 o_colored_level pt4 o_cc o_cc1" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;">
-                    <div class="o_container_small" style="max-width: 900px;">
-                      <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                 <div class="o_container_small" style="max-width: 900px;">
+                    <div class="row s_nb_column_fixed s_col_no_bgcolor">
                         <div class="s_media_list_item pb16 pt0 col-lg-12" data-name="Media item">
-                          <div class="row s_col_no_resize s_col_no_bgcolor no-gutters o_cc o_cc1 o_colored_level align-items-start" style="">
+                            <div class="row s_col_no_resize s_col_no_bgcolor no-gutters o_cc o_cc1 o_colored_level align-items-start" style="">
                             <div class="align-self-stretch s_media_list_img_wrapper col-lg-4">
                               <img t-att-src="image_data_uri(member.image_team)" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip811990" data-original-id="869" data-original-src="/web/image/869-e1e3b3b2/pu.jpg" data-mimetype="image/jpeg" data-resize-width="602" style="transform: scaleX(0.94) scaleY(0.91); animation-play-state: paused; transition: none 0s ease 0s;"/>
                             </div>
@@ -228,14 +219,19 @@
                               </div>
                               <div class="d-flex align-item-center mb-1">
                                   <div class="fa fa-envelope fa-fw mr-1"></div>
-                                  <a t-att-href="'mailto:'+member.email" t-esc="member.email"/>
+                                  <t t-if="member.organization_id.eng_name">
+                                      <a t-att-href="'mailto:'+member.email" t-esc="member.email"/>
+                                  </t>
+                                  <t t-if="not member.email">
+                                      -
+                                  </t>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
                     </div>
-                  </section>
+                 </div>
+                 </section>
             </section>
             </div>
         </div>
@@ -317,7 +313,7 @@
         </t>
 </template>
 
-<!--  Internship-->
+<!--Internship-->
 <template id="intern_list">
     <t t-call="website.layout">
     <t t-set="title">Jobs</t>
@@ -438,7 +434,7 @@
                       </t>
                   </div>
                 </div>
-                <!-- Job page-->
+                <!-- intern page-->
                     <div class="products_pager form-inline justify-content-center mt32">
                         <t t-call="website.pager"/>
                     </div>
@@ -447,11 +443,12 @@
     </t>
 </template>
 
-<!-- TSC Organization Member-->
+<!--TSC Organization Member-->
 <template id="tsc_org_member">
     <t t-call="website.layout">
     <t t-set="title">TSC Member</t>
          <div class="oe_structure">
+             <!--Header-->
              <section class="s_title o_colored_level pt24 pb8" data-vcss="001" data-snippet="s_title" style="background-image: none;" data-name="Custom Title">
                 <div class="container s_allow_columns">
                   <h3 style="text-align: center;">TSC members</h3>
@@ -476,14 +473,14 @@
                           <t t-if="dict_sci_value%2 == 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
                                   <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
                           <t t-if="dict_sci_value%2 != 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
                                   <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
@@ -491,7 +488,6 @@
                   </div>
                 </div>
              </section>
-
              <!--Academic-->
               <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
                 <div class="s_allow_columns container">
@@ -508,14 +504,14 @@
                           <t t-if="dict_academic_value%2 == 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
                                   <a t-attf-href = "#{dict_academic.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
                           <t t-if="dict_academic_value%2 != 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
                                   <a t-attf-href = "#{dict_academic.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_academic.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_academic.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
@@ -539,14 +535,14 @@
                           <t t-if="dict_mod_value%2 == 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
                                   <a t-attf-href = "#{dict_mod.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
                           <t t-if="dict_mod_value%2 != 0">
                               <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
                                   <a t-attf-href = "#{dict_mod.org_link}" target="_blank">
-                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" title="(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
+                                    <img t-att-src="image_data_uri(dict_mod.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#(dict_mod.eng_name)" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
@@ -557,5 +553,4 @@
          </div>
     </t>
 </template>
-
 </odoo>

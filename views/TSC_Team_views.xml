@@ -9,7 +9,7 @@
         <field name="name"/>
         <field name="position"/>
         <field name="organization_id"/>
-        <field name="image_team" widget="image" class="oe_avatar"/>
+        <field name="image_team" widget='image' class="oe_avatar"/>
       </tree>
     </field>
   </record>
@@ -30,7 +30,7 @@
             <group>
               <field name="position"/>
               <field name="position_detail"/>
-              <field name="image_team" widget="image" class="oe_avatar"/>
+              <field name="image_team" widget='image' class="oe_avatar"/>
             </group>
           </group>
         </sheet>

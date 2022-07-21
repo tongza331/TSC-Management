@@ -12,13 +12,13 @@ class TSCOrganization(models.Model):
         ('Academic','Academic'),
         ('Ministry of Defence','Ministry of Defence')
     ]
-    name = fields.Char(string='Organization Code', required=True, tracking=True)
-    eng_name = fields.Char(string='Organization Name (English)', required=True, tracking=True)
-    thai_name = fields.Char(string='Organization Name (Thai)', required=True, tracking=True)
-    image_org = fields.Image(string='Picture of organization',
+    name = fields.Char(string='Organization code', required=True, tracking=True)
+    eng_name = fields.Char(string='Organization name (English)', required=True, tracking=True)
+    thai_name = fields.Char(string='Organization name (Thai)', required=True, tracking=True)
+    image_org = fields.Image(string='Photo of organization',
                              max_width=200, max_height=200, required=True, tracking=True)
-    organization_category = fields.Selection(OrganizationCategory, string='Organization Category', required=True)
-    org_link = fields.Char(string='Organization Url', tracking=True)
+    organization_category = fields.Selection(OrganizationCategory, string='Organization category', required=True)
+    org_link = fields.Char(string='Organization url', tracking=True)
 
     _sql_constraints = [
         ('name_uniq', 'unique (name)', "Organization name already exists !"),
