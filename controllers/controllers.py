@@ -2,7 +2,16 @@
 from odoo import http, fields
 from odoo.http import request
 
+def match_organization_count(seq):
+    count = 0
+    dict_temp = {}
+    for temp in seq:
+        count += 1
+        dict_temp[temp] = count
+    return dict_temp
+
 class WebsiteTSC(http.Controller):
+
     @http.route('/team', auth='public', website=True)
     def team_list(self, **kw):
         leader_team = http.request.env['tsc.team'].search([('position', '=', 'Leader')])
@@ -68,7 +77,7 @@ class WebsiteTSC(http.Controller):
         })
 
 
-    @http.route(['/about-us/tsc-member'],
+    @http.route(['/about-us/tsc-members'],
                 type='http', auth='public', website=True)
     def tsc_org_member(self, **kw):
         science = http.request.env['tsc.organization'].search([('organization_category', '=', 'Scientific')])
@@ -76,24 +85,9 @@ class WebsiteTSC(http.Controller):
         mod = http.request.env['tsc.organization'].search([('organization_category', '=', 'Ministry of Defence')])
         org_category = http.request.env['tsc.organization'].search([])
 
-        dict_sci = {}
-        dict_academic = {}
-        dict_mod = {}
-        i = 0
-        j = 0
-        k = 0
-        for temp in science:
-            i = i+1
-            dict_sci[temp] = i
-
-        for temp in academic:
-            j = j+1
-            dict_academic[temp] = j
-
-        for temp in mod:
-            k = k+1
-            dict_mod[temp] = k
-
+        dict_sci = match_organization_count(science)
+        dict_academic = match_organization_count(academic)
+        dict_mod = match_organization_count(mod)
 
         return http.request.render("tsc.tsc_org_member", {
             'science': science,

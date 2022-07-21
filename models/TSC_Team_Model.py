@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import base64
-
 from odoo import api, fields, models
 from odoo import tools, _
 from odoo.modules.module import get_module_resource
@@ -22,7 +21,7 @@ class TSCTeam(models.Model):
     name = fields.Char(string='Firstname Lastname', required=True, tracking=True, translate=True)
     position = fields.Selection(position_choice, string='Position in TSC', required=True, tracking=True)
     position_detail = fields.Char(string='Position detail', required=True, tracking=True)
-    organization_id = fields.Many2one('tsc.organization',string='Organization', tracking=True, ondelete='set null')
+    organization_id = fields.Many2one('tsc.organization', string='Organization', tracking=True, ondelete='set null')
     email = fields.Char(string='Email')
     date_join = fields.Date(string='Date joined')
 

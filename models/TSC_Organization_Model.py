@@ -6,11 +6,12 @@ class TSCOrganization(models.Model):
     _name = 'tsc.organization'
     _description = 'Organization in TSC'
     _inherit = ['mail.thread', 'mail.activity.mixin']
+    _order = 'id'
 
     OrganizationCategory = [
-        ('Scientific','Scientific'),
-        ('Academic','Academic'),
-        ('Ministry of Defence','Ministry of Defence')
+        ('Scientific', 'Scientific'),
+        ('Academic', 'Academic'),
+        ('Ministry of Defence', 'Ministry of Defence')
     ]
     name = fields.Char(string='Organization code', required=True, tracking=True)
     eng_name = fields.Char(string='Organization name (English)', required=True, tracking=True)
@@ -20,6 +21,7 @@ class TSCOrganization(models.Model):
     organization_category = fields.Selection(OrganizationCategory, string='Organization category', required=True)
     org_link = fields.Char(string='Organization url', tracking=True)
 
+    # Duplicate prevention of name
     _sql_constraints = [
         ('name_uniq', 'unique (name)', "Organization name already exists !"),
     ]
