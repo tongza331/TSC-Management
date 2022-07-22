@@ -1,5 +1,6 @@
 # TSC-Management
 Pre-release for TSC Website. 
+
 OS: Windows10 or Windows11
 
 # Odoo Basic
