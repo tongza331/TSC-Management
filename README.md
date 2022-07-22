@@ -42,7 +42,7 @@ Add custom addons path
 
 Add PostgreSQL bin for Backup or Restore Database
 - Go to location: C:\odoo\odoo\odoo.conf
-- Add path in that file: pg_path = C:\Program Files\PostgreSQL\<version>\bin
+- Add path in that file: pg_path = C:\Program Files\PostgreSQL\\<version>\bin
 
 ## Files path
 ```
