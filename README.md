@@ -75,6 +75,7 @@ tsc
     ├── TSC_Organization_views.xml
     ├── TSC_Team_views.xml
     ├── TSC_templates.xml
+```
 
 ## Files description
     - Module name: tsc
