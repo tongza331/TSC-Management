@@ -50,8 +50,8 @@
                                 <div class="row">
                                 <t t-foreach="leader_team" t-as="leader_team">
                                     <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
-                                        <img t-att-src="image_data_uri(leader_team.image_team)" class="ratio-img img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
-                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                        <img t-att-src="image_data_uri(leader_team.image_team)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important; aspect-ratio: 1/1; object-fit: cover; object-position: top;" loading="lazy"
                                         data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
                                         data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
 
@@ -77,8 +77,8 @@
                                 <div class="row">
                                 <t t-foreach="advisor_team" t-as="advisor_team">
                                     <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
-                                        <img t-att-src="image_data_uri(advisor_team.image_team)" class="ratio-img img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
-                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                        <img t-att-src="image_data_uri(advisor_team.image_team)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important; aspect-ratio: 1/1; object-fit: cover; object-position: top;" loading="lazy"
                                         data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
                                         data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
 
@@ -104,8 +104,8 @@
                                 <div class="row">
                                 <t t-foreach="researcher_team" t-as="researcher_team">
                                     <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
-                                        <img t-att-src="image_data_uri(researcher_team.image_team)" class="ratio-img img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
-                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                        <img t-att-src="image_data_uri(researcher_team.image_team)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important; aspect-ratio: 1/1; object-fit: cover; object-position: top;" loading="lazy"
                                         data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
                                         data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
 
@@ -131,9 +131,10 @@
                                 <div class="row">
                                 <t t-foreach="engineer_team" t-as="engineer_team">
                                     <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
-                                        <img t-att-src="image_data_uri(engineer_team.image_team)" class="ratio-img img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
-                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="aspect-ratio: 1 / 1; object-fit: cover; object-position: top; width: 100% !important;" loading="lazy"
-                                        data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716" data-width="300" data-height="300" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
+                                        <img t-att-src="image_data_uri(engineer_team.image_team)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                        alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important; aspect-ratio: 1/1; object-fit: cover; object-position: top;" loading="lazy"
+                                        data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
+                                        data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
 
                                         <h3>
                                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
