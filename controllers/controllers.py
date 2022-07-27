@@ -47,7 +47,7 @@ class WebsiteTSC(http.Controller):
         pager = request.website.pager(url='/career/job', total=total_count, page=page, step=per_page, scope=3, url_args=None)
 
         # offset = Count to exclude (first n)
-        jobs = request.env['tsc.career'].search(domain, limit=per_page, offset=pager['offset'], order='create_date desc')
+        jobs = request.env['tsc.career'].search(domain, limit=per_page, offset=pager['offset'], order='create_date desc, id desc')
         return http.request.render("tsc.job_list",{
             'jobs': jobs,
             'pager': pager,
@@ -70,7 +70,7 @@ class WebsiteTSC(http.Controller):
         pager = request.website.pager(url='/career/intern', total=total_count, page=page, step=per_page, scope=3, url_args=None)
 
         # offset = Count to exclude (first n)
-        intern = request.env['tsc.career'].search(domain, limit=per_page, offset=pager['offset'], order='create_date desc')
+        intern = request.env['tsc.career'].search(domain, limit=per_page, offset=pager['offset'], order='create_date desc, id desc')
         return http.request.render("tsc.intern_list", {
             'intern': intern,
             'pager': pager,

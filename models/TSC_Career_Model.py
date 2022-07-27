@@ -5,7 +5,7 @@ class TSCCareer(models.Model):
     _name = 'tsc.career'
     _description = 'Career in TSC'
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _order = "create_date desc, day_left asc"
+    _order = "create_date desc, id desc"
 
     CareerTag = [
         ('Announcement', 'Announcement'),
@@ -25,7 +25,8 @@ class TSCCareer(models.Model):
     open_date = fields.Date(string='Start date',default=fields.Date.today(), required=True)
     expired_date = fields.Date(string='End date')
     day_left = fields.Char(string='Day left', readonly=True, compute='_compute_difference')
-    create_date = fields.Date('Created on', default=fields.Date.today(), index=True, readonly=True)
+    create_date = fields.Datetime('Created on', default=fields.datetime.now(), index=True, readonly=True)
+    date_today = fields.Date('Date today', default=fields.Date.today(), readonly=True)
 
     @api.depends('expired_date', 'create_date', 'day_left')
     def _compute_difference(self):

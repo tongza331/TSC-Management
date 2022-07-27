@@ -178,8 +178,9 @@
                     </div>
                 </div>
             </section>
+
             <section class="s_tabs o_colored_level">
-                <div class="col-md-4" style="margin-top: 10px;">
+                <div class="col-md-4" style="margin-top: 10px; max-width: fit-content !important;">
                 <!-- Breadcrumbs -->
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
@@ -220,7 +221,7 @@
                               </div>
                               <div class="d-flex align-item-center mb-1">
                                   <div class="fa fa-envelope fa-fw mr-1"></div>
-                                  <t t-if="member.organization_id.eng_name">
+                                  <t t-if="member.email">
                                       <a t-att-href="'mailto:'+member.email" t-esc="member.email"/>
                                   </t>
                                   <t t-if="not member.email">
@@ -317,7 +318,7 @@
 <!--Internship-->
 <template id="intern_list">
     <t t-call="website.layout">
-    <t t-set="title">Jobs</t>
+    <t t-set="title">Internship</t>
         <div class="oe_structure">
             <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="background-image: none;" data-original-title="" title="" aria-describedby="tooltip712102">
                 <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url(&quot;/web/image/1569-f5bee64c/ff11388802df02662688057eb0e738ec.png&quot;); background-position: 50% 81.8497%;" data-original-id="1563" data-original-src="/web/image/1563-5277a178/_MG_0011.jpg" data-mimetype="image/jpeg" data-resize-width="1920"/>
@@ -472,14 +473,14 @@
                   <div class="row">
                       <t t-foreach="dict_sci" t-as="dict_sci">
                           <t t-if="dict_sci_value%2 == 0">
-                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px;">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="background-color: rgb(242, 242, 242) !important; margin: 10px 0px; height:182px">
                                   <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
                                     <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
                               </div>
                           </t>
                           <t t-if="dict_sci_value%2 != 0">
-                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px;" data-original-title="" title="" aria-describedby="tooltip768692">
+                              <div class="col-lg-2 pt16 pb16 o_colored_level o_animate o_anim_zoom_in o_visible" style="margin: 10px 0px; height:182px" data-original-title="" title="" aria-describedby="tooltip768692">
                                   <a t-attf-href = "#{dict_sci.org_link}" target="_blank">
                                     <img t-att-src="image_data_uri(dict_sci.image_org)" class="img img-fluid mx-auto" loading="lazy" data-mimetype="image/png" data-resize-width="200" data-original-title="" t-attf-title="#{dict_sci.eng_name}" aria-describedby="tooltip708545" style="height:100%; object-fit:contain;"/>
                                   </a>
