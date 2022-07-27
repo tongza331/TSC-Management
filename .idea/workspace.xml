@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix class image in Team page">
+    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix order, Fix track style (css)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TSC_Career_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/TSC_Career_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/TSC_templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_templates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TSC_Team_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/TSC_Team_Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/src/img/avatar.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658893234507</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix order, Fix track style (css)">
+      <created>1658898764092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658898764092</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +106,7 @@
     <MESSAGE value="Re-factor file name, fix title tooltips" />
     <MESSAGE value="Re-factor code 1.0" />
     <MESSAGE value="Fix class image in Team page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix class image in Team page" />
+    <MESSAGE value="Fix order, Fix track style (css)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix order, Fix track style (css)" />
   </component>
 </project>
