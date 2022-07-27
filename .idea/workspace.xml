@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix order, Fix track style (css)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/TSC_Team_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/TSC_Team_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/src/img/avatar.jpeg" beforeDir="false" />
-    </list>
+    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Change Avatar.png" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658898764092</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change Avatar.png">
+      <created>1658900890744</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658900890744</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +110,7 @@
     <MESSAGE value="Re-factor code 1.0" />
     <MESSAGE value="Fix class image in Team page" />
     <MESSAGE value="Fix order, Fix track style (css)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix order, Fix track style (css)" />
+    <MESSAGE value="Change Avatar.png" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Avatar.png" />
   </component>
 </project>
