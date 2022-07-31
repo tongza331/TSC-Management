@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+  <record id="view_tsc_team_kanban" model="ir.ui.view">
+    <field name="name">tsc.team.kanban.view</field>
+    <field name="model">tsc.team</field>
+    <field name="arch" type="xml">
+      <kanban>
+        <field name="name"/>
+        <field name="position"/>
+        <field name="organization_id"/>
+        <field name="id"/>
+        <field name="image_team" widget='image' class="oe_avatar"/>
+        <templates>
+          <t t-name="kanban-box">
+            <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill">
+              <div class="o_kanban_image d-none d-md-block"
+              t-attf-style="background-image:url('#{kanban_image('tsc.team','image_team', record.id.raw_value, placeholder)}">
+<!--                <img class="o_kanban_image_inner_pic"-->
+<!--                     t-att-src="kanban_image('tsc.team','image_team', record.id.raw_value)"/>-->
+              </div>
+              <div class="oe_kanban_details">
+                <strong class="o_kanban_record_title"><field name="name"/></strong>
+                <div class="o_kanban_tags_section"/>
+                  <ul>
+                    <li>Position: <field name="position"/></li>
+                    <li>Position detail: <field name="position_detail"/></li>
+                    <li>Organization: <field name="organization_id"/></li>
+                  </ul>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
 
   <record id="view_tsc_team_tree" model="ir.ui.view">
     <field name="name">tsc.team.tree</field>
@@ -9,7 +42,6 @@
         <field name="name"/>
         <field name="position"/>
         <field name="organization_id"/>
-        <field name="image_team" widget='image' class="oe_avatar"/>
       </tree>
     </field>
   </record>
@@ -48,7 +80,7 @@
     <field name="name">Team</field>
     <field name="type">ir.actions.act_window</field>
     <field name="res_model">tsc.team</field>
-    <field name="view_mode">tree,kanban,form</field>
+    <field name="view_mode">kanban,tree,form</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">
           Create first member !

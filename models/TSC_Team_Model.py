@@ -30,5 +30,5 @@ class TSCTeam(models.Model):
         image_path = get_module_resource('tsc', 'static/src/img', 'avatar.png')
         return base64.b64encode(open(image_path, 'rb').read())
 
-    image_team = fields.Image("Your photo", default=_default_image, attachment=True, max_width=300, max_height=300)
+    image_team = fields.Image("Your photo", default=_default_image, attachment=True)
 

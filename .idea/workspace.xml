@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Change Avatar.png" />
+    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Change Avatar.png">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TSC_Career_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/TSC_Career_Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/TSC_Team_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/TSC_Team_Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/TSC_Organization_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_Organization_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/TSC_Team_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_Team_views.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658900890744</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change Avatar.png">
+      <created>1658900908084</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658900908084</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
