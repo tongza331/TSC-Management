@@ -44,6 +44,10 @@ Add PostgreSQL bin for Backup or Restore Database
 - Go to location: C:\odoo\odoo\odoo.conf
 - Add path in that file: pg_path = C:\Program Files\PostgreSQL\version\bin
 
+
+## Important things
+    - หากต้องการแก้ไขรูปภาพในหน้า /Team, /about-us/tsc-members, /career/job, career/intern ต้องแก้ภายใน code เท่านั้น หากแก้ในหน้า odoo แล้วกด save เลย จะทำให้ไม่สามารถแก้ไขภาพอื่น ๆ ได้อีกเลย เมนูที่นอกเหนือจากที่กล่าวไปข้างต้น สามารถแก้ไขบนหน้า odoo ได้ตามปรกคิ
+    
 ## Files path
 ```
 tsc
@@ -104,4 +108,5 @@ tsc
         - TSC_templates.xml เป็นไฟล์ที่แสดงผลบนเว็บไซต์ และดึงข้อมูลจาก backend ผ่าน controllers
         
     
+ 
     
