@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="add kanban view in TSC Team, Organization">
+    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix kanban style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/TSC_Organization_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_Organization_views.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/TSC_Team_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_Team_views.xml" afterDir="false" />
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659271212580</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix kanban style">
+      <created>1659336233098</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659336233098</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +137,7 @@
     <MESSAGE value="Fix order, Fix track style (css)" />
     <MESSAGE value="Change Avatar.png" />
     <MESSAGE value="add kanban view in TSC Team, Organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="add kanban view in TSC Team, Organization" />
+    <MESSAGE value="Fix kanban style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix kanban style" />
   </component>
 </project>
