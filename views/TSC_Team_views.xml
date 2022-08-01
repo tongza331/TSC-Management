@@ -13,10 +13,9 @@
         <templates>
           <t t-name="kanban-box">
             <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill">
-              <div class="o_kanban_image d-none d-md-block"
-              t-attf-style="background-image:url('#{kanban_image('tsc.team','image_team', record.id.raw_value, placeholder)}">
-<!--                <img class="o_kanban_image_inner_pic"-->
-<!--                     t-att-src="kanban_image('tsc.team','image_team', record.id.raw_value)"/>-->
+              <div class="o_kanban_image d-none d-md-block">
+              <img class="o_kanban_image_inner_pic" style= "position: relative; max-height:100%; max-width:100%;"
+                    t-att-src="kanban_image('tsc.team','image_team', record.id.raw_value)"/>
               </div>
               <div class="oe_kanban_details">
                 <strong class="o_kanban_record_title"><field name="name"/></strong>
