@@ -44,6 +44,10 @@ Add PostgreSQL bin for Backup or Restore Database
 - Go to location: C:\odoo\odoo\odoo.conf
 - Add path in that file: pg_path = C:\Program Files\PostgreSQL\version\bin
 
+
+## Important things
+- หากต้องการแก้ไขรูปภาพในหน้า /Team, /about-us/tsc-members, /career/job, career/intern ต้องแก้ภายใน code เท่านั้น หากแก้ในหน้า odoo แล้วกด save เลย จะทำให้ไม่สามารถแก้ไขภาพอื่น ๆ ได้อีกเลย เมนูที่นอกเหนือจากที่กล่าวไปข้างต้น สามารถแก้ไขบนหน้า odoo ได้ตามปรกคิ
+    
 ## Files path
 ```
 tsc
@@ -78,30 +82,31 @@ tsc
 ```
 
 ## Files description
-    - Module name: tsc
-    - __init__.py คือ ไฟล์ที่เอาไว้ import ไฟล์ controllers และ models 
-    - __manifest__.py คือ ไฟล์ที่มีไว้ตั้งค่ารายละเอียดของ module รวมทั้งเอาไว้เพิ่ม path file ของ data ด้วย
-    - โฟลเดอร์ controllers ประกอบไปด้วย
-        - __init__.py เป็นไฟล์ที่เอาไว้ import ไฟล์ในโฟลเดอร์ controllers ทั้งหมด
-        - controllers.py เป็นไฟล์ที่เอาไว้ควบคุมการทำงานระหว่าง models และ views
-    - โฟลเดอร์ demo มีไว้เพื่อจำรองข้อมูล (ไม่ได้ใช้งาน)
-    - โฟลเดอร์ models คือโฟลเดอร์ที่เอาไว้เก็บไฟล์ของการสร้างโมเดล ประกอบไปด้วย
-        - __init__.py คือไฟล์ที่เอาไว้ import ชื่อไฟล์ในโฟลเดอร์ model ทั้งหมด
-        - TSC_Career_Model.py คือไฟล์ที่เอาสร้างโมเดลของ careers
-        - TSC_Organization_Model.py คือไฟล์ที่เอาไว้สร้างโมเดลของ organization
-        - TSC_Team_Model.py คือไฟล์ที่เอาไว้สร้างโมเดลของ profile team
-    - โฟลเดอร์ security ประกอบไปด้วย ir.model.access.csv เป็นไฟล์ที่มีไว้เพื่ออนุญาติว่า group user สามารถทำอะไรได้บ้าง (ได้ 1 ไม่ได้ 0)
-    - โฟลเดอร์ static คือโฟลเดอร์ที่เอาไว้เก็บ source อื่น ๆ เช่น รูป, js, scss ประกอบไปด้วย
-        - โฟลเดอร์ description เอาไว้เก็บ icon ที่แสดงบน web browser
-        - โฟลเดอร์ src ประกอบไปด้วย
-            - โฟลเดอร์ img เอาไว้เก็บรูปต่าง ๆ
-            - โฟลเดอร์ scss เอาไว้เก็บไฟล์ scss
-    - โฟลเดอร์ views คือโฟลเดอร์ที่เอาไว้เก็บไฟล์ xml ต่าง ๆ ประกอบไปด้วย
-        - TSC_Career_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ career ใน backend
-        - TSC_menu.xml เป็นไฟล์ที่เอาไว้รวมเมนูของ Team, Organization และ Careers ใน backend
-        - TSC_Organization_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ organization ใน backend
-        - TSC_Team_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ Profile team ใน backend
-        - TSC_templates.xml เป็นไฟล์ที่แสดงผลบนเว็บไซต์ และดึงข้อมูลจาก backend ผ่าน controllers
+- Module name: tsc
+- __init__.py คือ ไฟล์ที่เอาไว้ import ไฟล์ controllers และ models 
+- __manifest__.py คือ ไฟล์ที่มีไว้ตั้งค่ารายละเอียดของ module รวมทั้งเอาไว้เพิ่ม path file ของ data ด้วย
+- โฟลเดอร์ controllers ประกอบไปด้วย
+  - __init__.py เป็นไฟล์ที่เอาไว้ import ไฟล์ในโฟลเดอร์ controllers ทั้งหมด
+  - controllers.py เป็นไฟล์ที่เอาไว้ควบคุมการทำงานระหว่าง models และ views
+- โฟลเดอร์ demo มีไว้เพื่อจำรองข้อมูล (ไม่ได้ใช้งาน)
+- โฟลเดอร์ models คือโฟลเดอร์ที่เอาไว้เก็บไฟล์ของการสร้างโมเดล ประกอบไปด้วย
+  - __init__.py คือไฟล์ที่เอาไว้ import ชื่อไฟล์ในโฟลเดอร์ model ทั้งหมด
+  - TSC_Career_Model.py คือไฟล์ที่เอาสร้างโมเดลของ careers
+  - TSC_Organization_Model.py คือไฟล์ที่เอาไว้สร้างโมเดลของ organization
+  - TSC_Team_Model.py คือไฟล์ที่เอาไว้สร้างโมเดลของ profile team
+- โฟลเดอร์ security ประกอบไปด้วย ir.model.access.csv เป็นไฟล์ที่มีไว้เพื่ออนุญาติว่า group user สามารถทำอะไรได้บ้าง (ได้ 1 ไม่ได้ 0)
+- โฟลเดอร์ static คือโฟลเดอร์ที่เอาไว้เก็บ source อื่น ๆ เช่น รูป, js, scss ประกอบไปด้วย
+  - โฟลเดอร์ description เอาไว้เก็บ icon ที่แสดงบน web browser
+  - โฟลเดอร์ src ประกอบไปด้วย
+    - โฟลเดอร์ img เอาไว้เก็บรูปต่าง ๆ
+    - โฟลเดอร์ scss เอาไว้เก็บไฟล์ scss
+- โฟลเดอร์ views คือโฟลเดอร์ที่เอาไว้เก็บไฟล์ xml ต่าง ๆ ประกอบไปด้วย
+  - TSC_Career_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ career ใน backend
+  - TSC_menu.xml เป็นไฟล์ที่เอาไว้รวมเมนูของ Team, Organization และ Careers ใน backend
+  - TSC_Organization_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ organization ใน backend
+  - TSC_Team_views.xml เป็นไฟล์ที่เอาไว้สร้าง form ของ Profile team ใน backend
+  - TSC_templates.xml เป็นไฟล์ที่แสดงผลบนเว็บไซต์ และดึงข้อมูลจาก backend ผ่าน controllers
         
     
+ 
     
