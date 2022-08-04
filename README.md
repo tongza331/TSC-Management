@@ -47,6 +47,8 @@ Add PostgreSQL bin for Backup or Restore Database
 
 ## Important things
 - หากต้องการแก้ไขรูปภาพในหน้า /Team, /about-us/tsc-members, /career/job, career/intern ต้องแก้ภายใน code เท่านั้น หากแก้ในหน้า odoo แล้วกด save เลย จะทำให้ไม่สามารถแก้ไขภาพอื่น ๆ ได้อีกเลย เมนูที่นอกเหนือจากที่กล่าวไปข้างต้น สามารถแก้ไขบนหน้า odoo ได้ตามปรกคิ
+- หากแก้ไข code ใน custom module เมื่อ save เสร็จแล้วให้มากด Upgrade ที่ TSC Management module เสมอ และกรณีที่แก้ไขในไฟล์ Model ต้องทำการ Restart terminal ก่อนเสมอ จากนั้นจึงกด Upgrage (เฉพาะกรณีของ TSC Module เท่านั้น) 
+- หากทำการ Uninstall module เช่น website, blog, tsc ข้อมูลที่ใส่ไว้ก็จะหายไปด้วย ดังนั้นหากจะ Uninstall ต้องมั่นใจก่อนว่าได้ทำการ Backup ข้อมูลไว้แล้ว
     
 ## Files path
 ```
