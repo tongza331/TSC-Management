@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix kanban style">
+    <list default="true" id="07bc289a-09bc-4077-ada0-1f12e98a982a" name="Changes" comment="Fix font size in organization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/TSC_templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/TSC_templates.xml" afterDir="false" />
     </list>
@@ -120,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659336624689</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix font size in organization">
+      <created>1659593694678</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659593694678</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +151,7 @@
     <MESSAGE value="Change Avatar.png" />
     <MESSAGE value="add kanban view in TSC Team, Organization" />
     <MESSAGE value="Fix kanban style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix kanban style" />
+    <MESSAGE value="Fix font size in organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix font size in organization" />
   </component>
 </project>
