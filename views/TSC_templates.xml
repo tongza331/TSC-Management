@@ -463,7 +463,7 @@
               <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
                 <div class="s_allow_columns container">
                   <h3 style="text-align: center;">
-                    <span style="font-size: 24px;">Scientific</span>
+                    <span style="font-size: 26px;">Scientific</span>
                     <font/>
                   </h3>
                 </div>
@@ -494,7 +494,7 @@
               <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
                 <div class="s_allow_columns container">
                   <h3 style="text-align: center;">
-                    <span style="font-size: 24px;">Academic</span>
+                    <span style="font-size: 26px;">Academic</span>
                     <font/>
                   </h3>
                 </div>
@@ -525,7 +525,7 @@
               <section class="s_title o_colored_level pb16 pt16 o_cc o_cc1 bg-white-25" data-vcss="001" data-snippet="s_title" style="" data-name="Custom Title">
                 <div class="s_allow_columns container">
                   <h3 style="text-align: center;">
-                    <span style="font-size: 24px;">Ministry of Defence</span>
+                    <span style="font-size: 26px;">Ministry of Defence</span>
                     <font/>
                   </h3>
                 </div>
